@@ -127,7 +127,7 @@ export const LogsTableView: React.FC = () => {
           <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
         </svg>
         <h2 className="text-xs font-black tracking-[0.2em] font-mono text-zinc-350 uppercase">
-          LOG DATA SISTEM
+          📊 LOG DATA SISTEM
         </h2>
       </div>
 
