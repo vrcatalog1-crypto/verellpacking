@@ -1,0 +1,6 @@
+{
+  "name": "Verell Packing System",
+  "description": "A high-fidelity logistics scanning system with real-time print logging, camera-simulated packing video recorders, courier delivery handovers, and Google Sheets webhook synchronization.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
