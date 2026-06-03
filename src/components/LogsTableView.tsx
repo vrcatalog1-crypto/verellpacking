@@ -132,42 +132,17 @@ export const LogsTableView: React.FC = () => {
       </div>
 
       {/* 2. Selection Display Mode Options & Action Buttons Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 shrink-0">
+      <div className="flex items-center justify-end mb-4 shrink-0">
         
-        {/* Toggle choices */}
-        <div className="flex bg-[#0b0c16] p-1 border border-white/10 rounded-xl space-x-1">
-          <button
-            type="button"
-            onClick={() => setLogDisplayMode('flat')}
-            className={`flex-1 py-2 text-center rounded-[10px] text-[10px] font-extrabold uppercase tracking-wide transition-all cursor-pointer ${
-              logDisplayMode === 'flat'
-                ? 'bg-[#1b2555] text-[#7185eb] border border-[#5d5fef]/10 font-black'
-                : 'text-zinc-500 hover:text-zinc-300'
-            }`}
-          >
-            RIWAYAT DETAIL (FLAT)
-          </button>
-          <button
-            type="button"
-            onClick={() => setLogDisplayMode('pivot')}
-            className={`flex-1 py-2 text-center rounded-[10px] text-[10px] font-extrabold uppercase tracking-wide transition-all cursor-pointer ${
-              logDisplayMode === 'pivot'
-                ? 'bg-[#5d5fef] text-white font-black'
-                : 'text-zinc-500 hover:text-zinc-300'
-            }`}
-          >
-            PIVOT (RESI)
-          </button>
-        </div>
-
-        {/* CSV & Copy Action Triggers */}
-        <div className="flex items-center gap-2 justify-end">
+        {/* CSV & Copy Action Triggers - Compact */}
+        <div className="flex items-center gap-1.5">
           <button
             type="button"
             onClick={() => handleCSVDownload(logDisplayMode)}
-            className="flex-1 md:flex-initial bg-[#16182c] border border-white/10 px-4 py-2 font-sans text-[10.5px] font-black uppercase text-zinc-300 hover:text-white rounded-xl flex items-center justify-center gap-1.5 cursor-pointer hover:bg-zinc-800/45 transition-colors"
+            className="bg-[#16182c] border border-white/10 px-2 py-1.5 font-sans text-[9px] font-bold uppercase text-zinc-300 hover:text-white rounded-lg flex items-center justify-center gap-0.5 cursor-pointer hover:bg-zinc-800/45 transition-colors"
+            title="Download CSV"
           >
-            <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
             </svg>
             CSV
@@ -175,9 +150,10 @@ export const LogsTableView: React.FC = () => {
           <button
             type="button"
             onClick={onCopyLogsToClipboard}
-            className="flex-1 md:flex-initial bg-[#16182c] border border-white/10 px-4 py-2 font-sans text-[10.5px] font-black uppercase text-zinc-300 hover:text-white rounded-xl flex items-center justify-center gap-1.5 cursor-pointer hover:bg-zinc-800/45 transition-colors"
+            className="bg-[#16182c] border border-white/10 px-2 py-1.5 font-sans text-[9px] font-bold uppercase text-zinc-300 hover:text-white rounded-lg flex items-center justify-center gap-0.5 cursor-pointer hover:bg-zinc-800/45 transition-colors"
+            title="Copy to clipboard"
           >
-            <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 00-2 2h2a2 2 0 002-2" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
             </svg>
             COPY

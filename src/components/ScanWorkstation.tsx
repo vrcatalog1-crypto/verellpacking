@@ -89,7 +89,7 @@ export const ScanWorkstation: React.FC = () => {
     <div className="flex flex-col gap-5 mb-6">
       
       {/* SCAN BARCODE CARD WORKSPACE */}
-      <div className="bg-[#121526]/80 border border-white/5 p-6 rounded-[24px] shadow-2xl relative">
+      <div className="bg-[#121526]/80 border border-white/5 p-6 rounded-[24px] shadow-2xl relative order-2">
         
         {/* Header workspace row with live pulse status */}
         <div className="flex items-center justify-between mb-5">
@@ -238,7 +238,7 @@ export const ScanWorkstation: React.FC = () => {
 
       {/* WEBCAM VIEWPORT FOR PACKING TAB */}
       {activeTab === 'PACKING' && (
-        <div className={`w-full ${getCameraSizeClass()} mx-auto transition-all duration-300`}>
+        <div className={`w-full ${getCameraSizeClass()} mx-auto transition-all duration-300 order-1`}>
           <div className="relative bg-[#0b0c16] border border-white/5 rounded-[24px] overflow-hidden shadow-2xl">
             <video
               ref={videoRef}
@@ -365,7 +365,7 @@ export const ScanWorkstation: React.FC = () => {
 
       {/* ACTIVE RECORINGS DRAWER IN PACKING SESSION */}
       {activeTab === 'PACKING' && Object.keys(activeRecordings).length > 0 && (
-        <div className="bg-[#121526]/80 border border-white/5 p-5 rounded-[24px] shadow-xl">
+        <div className="bg-[#121526]/80 border border-white/5 p-5 rounded-[24px] shadow-xl order-3">
           <span className="text-[10px] text-zinc-400 font-bold font-mono tracking-[0.2em] uppercase block mb-3.5">
             SESI REKAMAN PACKING AKTIF
           </span>
