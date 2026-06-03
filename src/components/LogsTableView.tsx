@@ -131,9 +131,8 @@ export const LogsTableView: React.FC = () => {
         </h2>
       </div>
 
-      {/* 2. Selection Display Mode Options & Action Buttons Row */}
+      {/* Action Buttons Row - CSV & Copy Compact */}
       <div className="flex items-center justify-end mb-4 shrink-0">
-        
         {/* CSV & Copy Action Triggers - Compact */}
         <div className="flex items-center gap-1.5">
           <button
